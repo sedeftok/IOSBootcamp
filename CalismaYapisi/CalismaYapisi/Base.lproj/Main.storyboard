@@ -52,6 +52,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Anasayfa" prompt="Açıklama" id="9VR-DE-B2x">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="j4p-Po-pBe"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="9Hf-FM-rMu">
+                                <connections>
+                                    <action selector="barButtonItemAdd:" destination="BYZ-38-t0r" id="B3i-1x-UJy"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" systemItem="save" id="84Y-7t-Wkf">
+                                <connections>
+                                    <action selector="barButtonItemSave:" destination="BYZ-38-t0r" id="Mua-u7-ds9"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="labelAnasayfa" destination="0hS-l6-TIQ" id="uvY-t7-ChI"/>
@@ -81,7 +93,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Geri"/>
                                 <connections>
-                                    <action selector="buttonGeri:" destination="NFI-gg-ZAn" eventType="touchUpInside" id="bWB-26-IbL"/>
+                                    <action selector="buttonGeri:" destination="NFI-gg-ZAn" eventType="touchUpInside" id="KGA-dp-oQJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLP-8U-ra8">
@@ -89,7 +101,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Bitir"/>
                                 <connections>
-                                    <action selector="buttonBitir:" destination="NFI-gg-ZAn" eventType="touchUpInside" id="ZqC-ok-a5o"/>
+                                    <action selector="buttonBitir:" destination="NFI-gg-ZAn" eventType="touchUpInside" id="gMc-AH-0Oe"/>
                                 </connections>
                             </button>
                         </subviews>
