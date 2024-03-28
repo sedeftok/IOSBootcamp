@@ -29,12 +29,8 @@ class UrunlerHucre: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
+
     @IBAction func buttonSepeteEkle(_ sender: Any) {
         hucreProtocol?.sepeteEkleTiklandi(indexPath: indexPath!)
     }
-    
-    
-
 }

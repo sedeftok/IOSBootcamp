@@ -20,6 +20,7 @@ class Anasayfa: UIViewController {
         urunlerTableView.dataSource = self
         
         
+        
         let u1 = Urunler(id: 1, ad:"Macbook Pro 14", resim: "bilgisayar", fiyat: 43000)
         let u2 = Urunler(id: 2, ad:"Rayban Club Master", resim: "gozluk", fiyat: 2500)
         let u3 = Urunler(id: 3, ad:"Sony ZX Series", resim: "kulaklik", fiyat: 40000)
@@ -46,6 +47,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource, HucreProtocol {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return urunlerListesi.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let urun = urunlerListesi[indexPath.row]
         
@@ -64,6 +66,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource, HucreProtocol {
         hucre.indexPath = indexPath
         return hucre
     }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let urun = urunlerListesi[indexPath.row]
         
@@ -91,6 +94,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource, HucreProtocol {
             }
         }
     }
+    
     func sepeteEkleTiklandi(indexPath: IndexPath) {
         let urun = urunlerListesi[indexPath.row]
         print("\(urun.ad!) sepete eklendi")

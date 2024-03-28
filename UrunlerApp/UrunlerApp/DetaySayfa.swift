@@ -10,10 +10,10 @@ import UIKit
 class DetaySayfa: UIViewController {
 
     @IBOutlet weak var imageViewUrun: UIImageView!
-    
     @IBOutlet weak var labelUrunFiyat: UILabel!
     
     var urun:Urunler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,11 +24,9 @@ class DetaySayfa: UIViewController {
         }
     }
     
-
     @IBAction func buttonSepeteEkle(_ sender: Any) {
-        if let u = urun{
+        if let u = urun {
             print("\(u.ad!) sepete eklendi.")
         }
     }
-    
 }
