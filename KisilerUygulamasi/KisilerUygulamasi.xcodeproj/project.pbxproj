@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393A30062BBA14D3002991EA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 393A30052BBA14D3002991EA /* RxSwift */; };
+		393A30092BBA14F6002991EA /* KisilerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A30082BBA14F6002991EA /* KisilerDaoRepository.swift */; };
+		393A300C2BBA157D002991EA /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A300B2BBA157D002991EA /* AnasayfaViewModel.swift */; };
+		393A300E2BBA15B8002991EA /* KisiKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A300D2BBA15B8002991EA /* KisiKayitViewModel.swift */; };
+		393A30102BBA15E3002991EA /* KisiDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A300F2BBA15E3002991EA /* KisiDetayViewModel.swift */; };
 		3963C2562BADF2E8001F0A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963C2552BADF2E8001F0A31 /* AppDelegate.swift */; };
 		3963C2582BADF2E8001F0A31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963C2572BADF2E8001F0A31 /* SceneDelegate.swift */; };
 		3963C25A2BADF2E8001F0A31 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963C2592BADF2E8001F0A31 /* Anasayfa.swift */; };
@@ -20,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		393A30082BBA14F6002991EA /* KisilerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDaoRepository.swift; sourceTree = "<group>"; };
+		393A300B2BBA157D002991EA /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		393A300D2BBA15B8002991EA /* KisiKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayitViewModel.swift; sourceTree = "<group>"; };
+		393A300F2BBA15E3002991EA /* KisiDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetayViewModel.swift; sourceTree = "<group>"; };
 		3963C2522BADF2E8001F0A31 /* KisilerUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisilerUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3963C2552BADF2E8001F0A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3963C2572BADF2E8001F0A31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +48,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393A30062BBA14D3002991EA /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393A30072BBA14D9002991EA /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				393A30082BBA14F6002991EA /* KisilerDaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		393A300A2BBA152F002991EA /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				393A300B2BBA157D002991EA /* AnasayfaViewModel.swift */,
+				393A300D2BBA15B8002991EA /* KisiKayitViewModel.swift */,
+				393A300F2BBA15E3002991EA /* KisiDetayViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		3963C2492BADF2E8001F0A31 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +107,7 @@
 		3963C2692BADF32F001F0A31 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				393A30072BBA14D9002991EA /* repo */,
 				3963C26B2BAE222F001F0A31 /* entity */,
 			);
 			path = data;
@@ -87,6 +116,7 @@
 		3963C26A2BADF33B001F0A31 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				393A300A2BBA152F002991EA /* viewmodel */,
 				3963C2732BAE3ECB001F0A31 /* tableview */,
 				3963C26C2BAE2249001F0A31 /* views */,
 			);
@@ -135,6 +165,9 @@
 			dependencies = (
 			);
 			name = KisilerUygulamasi;
+			packageProductDependencies = (
+				393A30052BBA14D3002991EA /* RxSwift */,
+			);
 			productName = KisilerUygulamasi;
 			productReference = 3963C2522BADF2E8001F0A31 /* KisilerUygulamasi.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 3963C2492BADF2E8001F0A31;
+			packageReferences = (
+				393A30042BBA14D3002991EA /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 3963C2532BADF2E8001F0A31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,9 +230,13 @@
 				3963C2752BAE3F22001F0A31 /* KisilerHucre.swift in Sources */,
 				3963C2702BAE22A1001F0A31 /* KisiDetay.swift in Sources */,
 				3963C25A2BADF2E8001F0A31 /* Anasayfa.swift in Sources */,
+				393A30092BBA14F6002991EA /* KisilerDaoRepository.swift in Sources */,
+				393A300C2BBA157D002991EA /* AnasayfaViewModel.swift in Sources */,
+				393A30102BBA15E3002991EA /* KisiDetayViewModel.swift in Sources */,
 				3963C2562BADF2E8001F0A31 /* AppDelegate.swift in Sources */,
 				3963C2582BADF2E8001F0A31 /* SceneDelegate.swift in Sources */,
 				3963C2722BAE24B4001F0A31 /* Kisiler.swift in Sources */,
+				393A300E2BBA15B8002991EA /* KisiKayitViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		393A30042BBA14D3002991EA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		393A30052BBA14D3002991EA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 393A30042BBA14D3002991EA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3963C24A2BADF2E8001F0A31 /* Project object */;
 }

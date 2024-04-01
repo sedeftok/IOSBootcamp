@@ -15,22 +15,22 @@ class Anasayfa: UIViewController {
     
     var kisilerListesi = [Kisiler]()
     
+    var viewModel = AnasayfaViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         kisilerTableView.dataSource = self
         kisilerTableView.delegate = self
         
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Sedef", kisi_tel: "143")
-        let k2 = Kisiler(kisi_id: 1, kisi_ad: "İnci", kisi_tel: "1433")
-        let k3 = Kisiler(kisi_id: 1, kisi_ad: "Işıl", kisi_tel: "14333")
-        kisilerListesi.append(k1)
-        kisilerListesi.append(k2)
-        kisilerListesi.append(k3)
+        _ = viewModel.kisilerListesi.subscribe(onNext: { liste in
+            self.kisilerListesi = liste
+            self.kisilerTableView.reloadData() // arayüzde değişiklik yaptıktan sonra güncelleme
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("anasayfaya dönüldü")
+        viewModel.kisileriYukle()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,7 +46,7 @@ class Anasayfa: UIViewController {
 extension Anasayfa : UISearchBarDelegate { // search barın çalışması için gerekli olan protokolu ekledik
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // UISearchBarDelegate protokolünden gelen func
-        print("Kişi Ara: \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
@@ -81,7 +81,7 @@ extension Anasayfa : UITableViewDelegate,UITableViewDataSource {
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel); alert.addAction(iptalAction)
 
             let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                print("Kişi Sil: \(kisi.kisi_id!)")
+                self.viewModel.sil(kisi_id: kisi.kisi_id!)
             }
             alert.addAction(evetAction)
             
